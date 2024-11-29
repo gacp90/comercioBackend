@@ -68,7 +68,7 @@ const fileUpload = async(req, res = response) => {
     if (tipo === 'products') {
 
         sharp(req.files.image.data)
-            .resize(300, 300)
+            .resize(1024, 1024)
             .webp({ equality: 75, effort: 6 })
             .toFile(path, (err, info) => {
 
