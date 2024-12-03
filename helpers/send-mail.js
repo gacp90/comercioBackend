@@ -17,13 +17,13 @@ const sendMail = async(email, subject, html, msg) => {
             port: 465,
             secure: true, // use TLS
             auth: {
-                user: "soporte@comerciollanero.com",
-                pass: "N80721272r",
+                user: "info@shopybrands.com",
+                pass: "*SHOPYBRANDSIlI2025*",
             },
         });
 
         const mailOptions = {
-            from: '"Comercio Llanero" <soporte@comerciollanero.com>', // sender address (who sends)
+            from: '"Comercio Llanero" <info@shopybrands.com>', // sender address (who sends)
             to: email, // list of receivers (who receives)
             subject, // Subject line
             html,
