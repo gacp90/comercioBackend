@@ -7,6 +7,9 @@ const ItemsSchema = Schema({
     qty: {
         type: Number
     },
+    details: {
+        type: String
+    },
     product: {
         type: Schema.Types.ObjectId,
         ref: 'Product'
