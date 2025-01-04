@@ -11,6 +11,17 @@ const ImgSchema = Schema({
     }
 });
 
+const videoSchema = Schema({
+    video: {
+        type: String
+    },
+
+    fecha: {
+        type: Date,
+        default: Date.now()
+    }
+});
+
 const ProductSchema = Schema({
 
     sku: {
@@ -129,6 +140,7 @@ const ProductSchema = Schema({
     },
 
     img: [ImgSchema],
+    videos: [videoSchema],
 
     date: {
         type: Date,
