@@ -34,6 +34,7 @@ app.use(express.static('public'));
 app.use('/api/login', require('./routes/auth.route'));
 app.use('/api/clients', require('./routes/clients.route'));
 app.use('/api/category', require('./routes/category.route'));
+app.use('/api/asdas', require('./routes/empresa.route'));
 app.use('/api/subcategory', require('./routes/subcategory.route'));
 app.use('/api/pedidos', require('./routes/pedido.route'));
 app.use('/api/products', require('./routes/products.route'));

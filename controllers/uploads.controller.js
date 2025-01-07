@@ -88,7 +88,6 @@ const fileUpload = async(req, res = response) => {
 
         // CONVERTIR A WEBP
         sharp(req.files.image.data)
-            .resize(100, 100)
             .webp({ equality: 75, effort: 6 })
             .toFile(path, (err, info) => {
 

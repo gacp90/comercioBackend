@@ -4,6 +4,7 @@ const fs = require('fs');
 const Product = require('../models/products.model');
 const User = require('../models/users.model');
 const Category = require('../models/category.model');
+const Empresa = require('../models/empresa.model');
 
 /** =====================================================================
  *  DELETE IMAGE
@@ -87,6 +88,53 @@ const updateImage = async(tipo, id, nameFile, desc) => {
             return true;
 
             break;
+
+        case 'logo':
+
+            // SEARCH USER BY ID
+            const empresa = await Empresa.findById(id);
+            if (!empresa) {
+                return false;
+            }
+
+            if (desc === 'logo') {
+
+                // VALIDATE IMAGE
+                pathOld = `./uploads/logo/${ empresa.logo }`;
+                deleteImage(pathOld);
+
+                // SAVE IMAGE
+                empresa.logo = nameFile;
+                await empresa.save();
+                return true;
+                
+            }else if(desc === 'logob'){
+
+                // VALIDATE IMAGE
+                pathOld = `./uploads/logo/${ empresa.logob }`;
+                deleteImage(pathOld);
+
+                // SAVE IMAGE
+                empresa.logob = nameFile;
+                await empresa.save();
+                return true;
+
+            }else if(desc === 'ico'){
+                // VALIDATE IMAGE
+                pathOld = `./uploads/logo/${ empresa.ico }`;
+                deleteImage(pathOld);
+
+                // SAVE IMAGE
+                empresa.ico = nameFile;
+                await empresa.save();
+                return true;
+            }else{
+                return;
+            }   
+
+            break;
+
+        
 
         default:
             break;
