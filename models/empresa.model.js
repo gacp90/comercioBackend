@@ -120,6 +120,11 @@ const EmpresasSchema = Schema({
         type: Boolean,
         default: false
     },
+
+    comofunciona: {
+        type: Boolean,
+        default: true
+    },
         
     nivelone: NivelSchema,
 
@@ -132,7 +137,7 @@ const EmpresasSchema = Schema({
     header: header,
 
     footer: footer,
-
+    
     status: {
         type: Boolean,
         default: true
