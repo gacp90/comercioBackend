@@ -106,6 +106,11 @@ const EmpresasSchema = Schema({
         default: '150'
     },
 
+    sizelogo: {
+        type: String,
+        default: '50'
+    },
+
     descripcion: {
         type: String
     },
