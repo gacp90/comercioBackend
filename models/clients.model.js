@@ -52,6 +52,10 @@ const ClientSchema = Schema({
         type: String
     },
 
+    zip: {
+        type: String
+    },
+
     email: {
         type: String,
         require: true,

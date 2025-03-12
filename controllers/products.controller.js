@@ -239,7 +239,6 @@ const createProductExcel = async(req, res = response) => {
         }
 
         let i = 0;
-
         for (const producto of products) {
 
             // VALIDATE CODE
